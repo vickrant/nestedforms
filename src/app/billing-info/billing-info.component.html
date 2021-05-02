@@ -1,0 +1,33 @@
+<div class="container">
+    <form [formGroup]="nestedForm" (ngSubmit)="onSubmit()">
+        <fieldset>
+            <legend>Personnal info:</legend>
+            <app-basic-info formControlName="basicInfo"></app-basic-info>
+        </fieldset>
+        <fieldset>
+            <legend>Address info</legend>
+            <app-address-info formControlName="address"></app-address-info>
+        </fieldset>
+        <fieldset>
+            <legend>Descriptions</legend>
+
+
+            <!-- <div formArrayName="descriptions"> -->
+
+
+                <app-description formControlName="descriptions"></app-description>
+   
+            <!-- </div> -->
+        </fieldset>
+
+        <button type="submit" [disabled]="nestedForm.invalid">Place Order</button>
+    </form>
+</div>
+
+
+
+
+
+<pre>
+    {{nestedForm.value|json}}
+</pre>
