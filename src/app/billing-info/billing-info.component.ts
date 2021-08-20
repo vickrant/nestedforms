@@ -36,6 +36,7 @@ export class BillingInfoComponent implements OnInit {
   constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
+    this.nestedForm.value.basicInfo = "sdsdfsdfsd"
   }
 
   addDescriptions(value) {
